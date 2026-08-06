@@ -10,7 +10,12 @@ import 'services/security_service.dart';
 import 'screens/splash_screen.dart';
 import 'theme/app_theme.dart';
 
-void main() => runApp(const CieloObsApp());
+void main() {
+  if (kIsWeb) {
+    databaseFactory = databaseFactoryFfiWeb;
+  }
+  runApp(const CieloObsApp());
+}
 
 class CieloObsApp extends StatelessWidget {
   const CieloObsApp({super.key});
