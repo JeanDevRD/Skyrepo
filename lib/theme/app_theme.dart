@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static const _diaPrimario = Color(0xFF3D6EA5);
+  static const _diaFondo = Color(0xFFF4F7FB);
   static const _nochePrimario = Color(0xFF7C8FE0);
   static const _nocheFondo = Color(0xFF11142B);
   static const _acentoLuna = Color(0xFFE8D9A0);
@@ -19,7 +20,7 @@ class AppTheme {
       foregroundColor: Colors.white,
       elevation: 0,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       elevation: 1,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
     ),
@@ -41,7 +42,7 @@ class AppTheme {
       foregroundColor: _acentoLuna,
       elevation: 0,
     ),
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: const Color(0xFF1B1F3B),
       elevation: 0,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),

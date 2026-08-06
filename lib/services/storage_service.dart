@@ -21,4 +21,10 @@ class StorageService {
       if (await d.exists()) await d.delete(recursive: true);
     }
   }
+
+  Future<String> nuevaRutaAudio() async {
+  final dir = await getApplicationDocumentsDirectory();
+  final destinoDir = Directory('${dir.path}/audios')..createSync(recursive: true);
+  return '${destinoDir.path}/${DateTime.now().millisecondsSinceEpoch}.m4a';
+}
 }
